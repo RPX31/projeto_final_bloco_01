@@ -41,7 +41,21 @@ public class RepositoryImpl implements Repository {
 
 	@Override
 	public void atualizarProduto(Principal produto) {
+		Principal produtoExistente = buscarProdutoPorNumero(produto.getNumero());
+        
+        if (produtoExistente != null) {
+            produtoExistente.setNome(produto.getNome()); 
+            produtoExistente.setPreco(produto.getPreco()); 
+            System.out.println("Produto " + produto.getNome() + " atualizado.");
+        } else {
+            System.out.println("Produto não encontrado para atualização.");
+        }
 		
 		
 	}
+
+	@Override
+    public List<Principal> listarProduto() {
+        return produtos;
+        }
 }
