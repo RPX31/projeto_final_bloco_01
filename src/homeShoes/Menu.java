@@ -17,15 +17,15 @@ public class Menu {
 				System.out.println("                                                     ");
 				System.out.println("*****************************************************");
 				System.out.println("                                                     ");
-				System.out.println("            1 - Criar Conta                          ");
-				System.out.println("            2 - Listar todas as Contas               ");
-				System.out.println("            3 - Buscar Conta por Numero              ");
-				System.out.println("            4 - Atualizar Dados da Conta             ");
-				System.out.println("            5 - Apagar Conta                         ");
+				System.out.println("            1 - Adicionar Produto                    ");
+				System.out.println("            2 - Listar Todos Produtos                ");
+				System.out.println("            3 - Buscar Produto por Número            ");
+				System.out.println("            4 - Atualizar Dados do Produto           ");
+				System.out.println("            5 - Excluir Produto                      ");
 				System.out.println("            0 - Sair                                 ");
 				System.out.println("                                                     ");
 				System.out.println("*****************************************************");
-				System.out.println("Entre com a opção desejada:                          ");
+				System.out.println("              Entre com a opção desejada:            ");
 				System.out.println("                                                     ");
 
 				opcao = leia.nextInt();
@@ -39,23 +39,23 @@ public class Menu {
 
 				switch (opcao) {
 					case 1:
-						System.out.println("Criar Conta\n\n");
+						System.out.println("Criar Produto\n\n");
 
 						break;
 					case 2:
-						System.out.println("Listar todas as Contas\n\n");
+						System.out.println("Listar Todos os Produtos\n\n");
 
 						break;
 					case 3:
-						System.out.println("Consultar dados da Conta - por número\n\n");
+						System.out.println("Consultar Dados do Produto - Por Número\n\n");
 
 						break;
 					case 4:
-						System.out.println("Atualizar dados da Conta\n\n");
+						System.out.println("Atualizar Dados do Produto\n\n");
 
 						break;
 					case 5:
-						System.out.println("Apagar a Conta\n\n");
+						System.out.println("Excluir Produto\n\n");
 
 						break;
 					
