@@ -2,20 +2,20 @@ package repository;
 
 import java.util.List;
 
-import model.Principal;
+import model.Produto;
 
 public interface Repository {
 
     
-    void adicionarProduto(Principal produto);
+    void adicionarProduto(Produto produto);
     
-    Principal buscarProdutoPorNumero(int numero);
+    Produto buscarProdutoPorNumero(int numero);
     
-    void atualizarProduto(Principal produto);
+    void atualizarProduto(Produto produto);
 
     
-    void removerProduto(Principal produto);
+    void removerProduto(Produto produto);
 
 
-	List<Principal> listarProduto();
+	List<Produto> listarProduto();
 }

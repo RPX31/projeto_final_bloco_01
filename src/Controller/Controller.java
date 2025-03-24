@@ -1,28 +1,30 @@
-package repository;
+package Controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Principal;
+import model.Produto;
+import repository.Repository;
 
-public class RepositoryImpl implements Repository {
+public class Controller implements Repository {
 
-    
-    private List<Principal> produtos= new ArrayList<>();
+	
+	
+private List<Produto> produtos= new ArrayList<>();
 
     
        
     
 
     @Override
-    public void adicionarProduto(Principal produto) {
+    public void adicionarProduto(Produto produto) {
         produtos.add(produto);
         System.out.println("Produto " + produto.getNome() + " adicionado.");
     }
 
     @Override
-    public Principal buscarProdutoPorNumero(int numero) {
-        for (Principal produto : produtos) {
+    public Produto buscarProdutoPorNumero(int numero) {
+        for (Produto produto : produtos) {
             if (produto.getNumero() == numero) {
                 return produto;
             }
@@ -31,7 +33,7 @@ public class RepositoryImpl implements Repository {
     }
 
     @Override
-    public void removerProduto(Principal produto) {
+    public void removerProduto(Produto produto) {
         if (produtos.remove(produto)) {
             System.out.println("Produto " + produto.getNome() + " removido.");
         } else {
@@ -40,8 +42,8 @@ public class RepositoryImpl implements Repository {
     }
 
 	@Override
-	public void atualizarProduto(Principal produto) {
-		Principal produtoExistente = buscarProdutoPorNumero(produto.getNumero());
+	public void atualizarProduto(Produto produto) {
+		Produto produtoExistente = buscarProdutoPorNumero(produto.getNumero());
         
         if (produtoExistente != null) {
             produtoExistente.setNome(produto.getNome()); 
@@ -55,7 +57,14 @@ public class RepositoryImpl implements Repository {
 	}
 
 	@Override
-    public List<Principal> listarProduto() {
+    public List<Produto> listarProduto() {
         return produtos;
         }
+
+	
+	
 }
+
+
+
+
